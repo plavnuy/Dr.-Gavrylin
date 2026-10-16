@@ -1238,36 +1238,49 @@ opacity: 1;
 /* Подкожный стендап: переключатель языка, эпиграф, кнопка следующей главы */
 .lang-switch {
   position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 1000;
   display: flex;
-  gap: 6px;
-  align-items: center;
-  padding: 6px 14px;
-  border-radius: 20px;
-  background: rgba(39, 39, 39, 0.8);
-  font-size: 14px;
-  font-weight: bold;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid #3a3a3a;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .lang-switch__item {
+  display: block;
+  width: 40px;
+  padding: 8px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
   color: #979797;
   text-decoration: none;
+  transition: color 0.2s, background-color 0.2s;
 }
 
-.lang-switch a.lang-switch__item:hover,
-.lang-switch__item.is-active {
+a.lang-switch__item:hover {
   color: #e8e74e;
+  background: rgba(232, 231, 78, 0.1);
 }
 
-.lang-switch__item.is-disabled {
-  opacity: 0.4;
+.lang-switch__item.is-active {
+  background: #e8e74e;
+  color: #272727;
 }
 
-.lang-switch__sep {
-  color: #5f5f5f;
+@media (max-width: 720px) {
+  .lang-switch {
+    top: auto;
+    bottom: 16px;
+    transform: none;
+  }
 }
 
 .standup-epigraph::first-letter {
@@ -1290,4 +1303,16 @@ opacity: 1;
   background-color: #e8e74e;
   color: #272727;
   text-decoration: none;
+}
+
+/* Главная: все тексты в один ряд, чтобы плитки не обрезались секцией fullPage */
+@media (min-width: 1000px) {
+  .texts .nav-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: auto 32px;
+  }
+
+  .texts .nav-item {
+    margin: 12px;
+  }
 }
