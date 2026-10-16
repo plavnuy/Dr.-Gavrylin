@@ -1234,3 +1234,60 @@ opacity: 1;
   50% { transform: scale(1.2); }
   100% { transform: scale(1); }
 }
+
+/* Подкожный стендап: переключатель языка, эпиграф, кнопка следующей главы */
+.lang-switch {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(39, 39, 39, 0.8);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.lang-switch__item {
+  color: #979797;
+  text-decoration: none;
+}
+
+.lang-switch a.lang-switch__item:hover,
+.lang-switch__item.is-active {
+  color: #e8e74e;
+}
+
+.lang-switch__item.is-disabled {
+  opacity: 0.4;
+}
+
+.lang-switch__sep {
+  color: #5f5f5f;
+}
+
+.standup-epigraph::first-letter {
+  font-size: inherit;
+  float: none;
+  margin: 0;
+  text-shadow: none;
+}
+
+.standup-epigraph .rich-text {
+  text-align: center;
+  opacity: 0.8;
+}
+
+.standup-next {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e8e74e;
+  color: #272727;
+  text-decoration: none;
+}

@@ -1,0 +1,127 @@
+<!--
+  ШАБЛОН НОВОГО ТЕКСТА
+  1. Скопируй этот файл: longreads/<slug>.html  (латиница, через дефис, напр. new-story.html)
+  2. Картинки положи в папку imgl/<короткое-имя>/ и пропиши пути ниже (../imgl/...)
+  3. Заполни <title>, description, обложку, заголовок и блоки текста
+  4. Добавь карточку на главную: в index.html раскомментируй заготовку в секции «Мої тексти»
+  Блоки ниже (раздел / абзац / картинка / цитата) можно копировать и ставить в любом порядке.
+-->
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>НАЗВАНИЕ | Роман Гаврилін</title>
+    <meta name="description" content="Короткое описание текста для поисковиков." >
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="components.js"></script>
+  </head>
+  <body>
+    <div class="progress-bar"></div>
+    <div id="header-placeholder"></div>
+    <div>
+      <a class="sticky-link2" href="../index.html">← На головну</a>
+    </div>
+
+    <!-- ОБЛОЖКА + ЗАГОЛОВОК -->
+    <section>
+      <figure class="content-img">
+        <img class="content-img" src="../imgl/ПАПКА/cover.jpg" style="max-width: 600px" />
+        <span>
+          <a href="https://www.behance.net/MariaShishova" target="_blank">Illustration: Maria Shishova</a>
+        </span>
+      </figure>
+      <h1 class="mamont" style="margin-top: 0px">Название <br> текста</h1>
+    </section>
+
+    <!-- ЗАГОЛОВОК РАЗДЕЛА -->
+    <section class="block-heading_h2">
+      <h3 class="content-title content-title--h3">
+        <div class="content-title__inner">
+          <div class="content-title__value">Предисловие</div>
+        </div>
+      </h3>
+    </section>
+
+    <!-- ПЕРВЫЙ АБЗАЦ РАЗДЕЛА (с буквицей: content-text--letter) -->
+    <section class="block-paragraph">
+      <div class="content-grid">
+        <div class="content-grid__column-half content-grid__column-fourth-shift--1">
+          <div class="content-text content-text--letter">
+            <div class="rich-text">
+              <p>Первый абзац.</p>
+              <p>Второй абзац.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАРТИНКА -->
+    <section class="block-image">
+      <div class="content-grid">
+        <div class="content-grid__column-wide">
+          <figure class="content-img">
+            <img src="../imgl/ПАПКА/1.jpg" class="content-img">
+            <span>
+              <a href="https://www.behance.net/MariaShishova" target="_blank">Illustration: Maria Shishova</a>
+            </span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОБЫЧНЫЙ АБЗАЦ (без буквицы) -->
+    <section class="block-paragraph">
+      <div class="content-grid">
+        <div class="content-grid__column-half content-grid__column-fourth-shift--1">
+          <div class="content-text">
+            <div class="rich-text">
+              <p>Текст.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЦИТАТА -->
+    <section class="block-pullquote">
+      <div class="content-grid">
+        <div class="content-grid__column-wide">
+          <div class="content-blockquote">Крупная цитата из текста</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОТСТУП МЕЖДУ РАЗДЕЛАМИ -->
+    <div style="height: 64px;"></div>
+
+    <div id="footer-placeholder"></div>
+
+    <div class="noise-wrap"><div class="noise"></div></div>
+
+    <script src="https://unpkg.com/split-type" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+
+    <script src="/lenis&gsap.js"></script>
+  </body>
+</html>
