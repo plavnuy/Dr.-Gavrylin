@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../styles.css?v=3" />
+    <link rel="stylesheet" href="../../styles.css?v=4" />
     <script src="../../components.js"></script>
   </head>
   <body>
@@ -20,6 +20,17 @@
       <a class="sticky-link2" href="./standup-ru.html">← До глав</a>
     </div>
     <nav class="lang-switch" aria-label="Мова / Язык"><a class="lang-switch__item" href="./standup-2-ua.html" title="Українська">UA</a><span class="lang-switch__item is-active" title="Русский">RU</span></nav>
+<script>
+  (function () {
+    let lastY = window.scrollY;
+    window.addEventListener("scroll", function () {
+      const y = window.scrollY;
+      const sw = document.querySelector(".lang-switch");
+      if (sw) sw.classList.toggle("is-hidden", y > 80 && y > lastY);
+      lastY = y;
+    }, { passive: true });
+  })();
+</script>
 
     <section>
       <figure class="content-img">
