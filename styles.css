@@ -1319,3 +1319,70 @@ a.lang-switch__item:hover {
     margin: 12px;
   }
 }
+
+/* Подкожный стендап: удобство чтения */
+.standup-page .rich-text {
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.standup-page .rich-text p {
+  margin: 0 0 1.1em;
+}
+
+/* реплики диалога держатся вместе */
+.standup-page .rich-text p.dl {
+  margin-bottom: 0.45em;
+}
+
+.standup-page .rich-text p.dl + p:not(.dl) {
+  margin-top: 1.1em;
+}
+
+/* буквица только у сцен, которые начинаются с буквы */
+.no-dropcap::first-letter {
+  font-size: inherit;
+  float: none;
+  margin: 0;
+  text-shadow: none;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+/* врезки: новости, цитаты, «инструкции», реплики со сцены */
+.standup-page .rich-text p.standup-aside {
+  border-left: 3px solid #e8e74e;
+  padding: 2px 0 2px 20px;
+  margin-left: 4px;
+  color: #cfcfcf;
+}
+
+.standup-page .rich-text p.standup-aside + p.standup-aside {
+  margin-top: -0.6em;
+}
+
+/* дневник: дата отдельной меткой */
+.standup-page .rich-text p.diary-date {
+  display: inline-block;
+  margin: 2.2em 0 0.6em;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: rgba(232, 231, 78, 0.12);
+  color: #e8e74e;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.standup-page .rich-text p.diary-date:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 720px) {
+  .standup-page .rich-text {
+    font-size: 17px;
+  }
+}
