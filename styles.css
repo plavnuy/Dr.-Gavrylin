@@ -1238,18 +1238,21 @@ opacity: 1;
 /* Подкожный стендап: переключатель языка, эпиграф, кнопка следующей главы */
 .lang-switch {
   position: fixed;
+  top: 12px;
   right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
   z-index: 1000;
   display: flex;
-  flex-direction: column;
   gap: 4px;
   padding: 4px;
   border-radius: 12px;
   background: rgba(20, 20, 20, 0.85);
   border: 1px solid #3a3a3a;
   font-family: "Montserrat Alternates", sans-serif;
+}
+
+/* на страницах глав справа сверху стоят соцсети — сдвигаемся левее */
+body:has(#header-placeholder header) .lang-switch {
+  right: 72px;
 }
 
 .lang-switch__item {
@@ -1275,13 +1278,6 @@ a.lang-switch__item:hover {
   color: #272727;
 }
 
-@media (max-width: 720px) {
-  .lang-switch {
-    top: auto;
-    bottom: 16px;
-    transform: none;
-  }
-}
 
 .standup-epigraph::first-letter {
   font-size: inherit;
