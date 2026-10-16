@@ -1349,18 +1349,6 @@ a.lang-switch__item:hover {
   font-weight: inherit;
 }
 
-/* врезки: новости, цитаты, «инструкции», реплики со сцены */
-.standup-page .rich-text p.standup-aside {
-  border-left: 3px solid #e8e74e;
-  padding: 2px 0 2px 20px;
-  margin-left: 4px;
-  color: #cfcfcf;
-}
-
-.standup-page .rich-text p.standup-aside + p.standup-aside {
-  margin-top: -0.6em;
-}
-
 /* дневник: дата отдельной меткой */
 .standup-page .rich-text p.diary-date {
   display: inline-block;
